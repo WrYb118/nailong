@@ -34,13 +34,7 @@ const SITE = {
 /* ---------------- 2. 课程清单 ---------------- */
 /* key 用短英文，name 是页面上显示的名字，color 是这门课在时间线上的圆点颜色 */
 
-const COURSES = {
-  ds: { name: "数据结构", color: "#2C4A7C" },
-  os: { name: "操作系统", color: "#7A4E2D" },
-  net: { name: "计算机网络", color: "#2F6B57" },
-  db: { name: "数据库系统", color: "#6B4A7A" },
-  algo: { name: "算法设计与分析", color: "#8A3A3A" },
-};
+const COURSES = {};
 
 /* ---------------- 3. 作业列表 ---------------- */
 /*
@@ -64,7 +58,6 @@ const COURSES = {
 const ASSIGNMENTS = [
   {
     id: "ds-hw03",
-    course: "ds",
     title: "实验三：二叉搜索树的插入、删除与遍历",
     date: "2026-10-12",
     summary: "用 C++ 实现非递归版 BST，对比递归与非递归实现在深度 10 万节点下的耗时差异。",
@@ -72,46 +65,5 @@ const ASSIGNMENTS = [
     grade: "96",
     repo: "https://github.com/WrYb118/ds-lab",
     files: [{ label: "实验报告", url: "files/sample-report.pdf" }],
-  },
-  {
-    id: "os-hw02",
-    course: "os",
-    title: "实验二：进程调度算法模拟",
-    date: "2026-09-28",
-    summary: "模拟 FCFS、SJF、时间片轮转三种调度策略，输出甘特图并统计平均周转时间。",
-    tags: ["Python", "调度算法", "甘特图"],
-    files: [
-      { label: "实验报告", url: "files/sample-report.pdf" },
-      { label: "源码", url: "files/sample-code.zip" },
-    ],
-  },
-  {
-    id: "net-hw01",
-    course: "net",
-    title: "实验一：基于 UDP 的可靠传输协议",
-    date: "2026-09-20",
-    summary: "在应用层实现停等协议与滑动窗口，模拟丢包与乱序环境验证重传机制。",
-    tags: ["Socket", "UDP", "可靠传输"],
-    grade: "92",
-    repo: "https://github.com/WrYb118/net-lab",
-    files: [{ label: "实验报告", url: "files/sample-report.pdf" }],
-  },
-  {
-    id: "db-hw01",
-    course: "db",
-    title: "课程设计：图书借阅管理系统数据库设计",
-    date: "2026-06-15",
-    summary: "完成 E-R 建模、三范式规范化、索引设计与 20 条核心 SQL，附存储过程与触发器实现。",
-    tags: ["MySQL", "E-R 模型", "课程设计"],
-    files: [{ label: "设计文档", url: "files/sample-report.pdf" }],
-  },
-  {
-    id: "algo-hw04",
-    course: "algo",
-    title: "作业四：动态规划专题",
-    date: "2026-05-30",
-    summary: "最长公共子序列、背包问题、区间 DP 共 8 题，含复杂度分析与证明。",
-    tags: ["动态规划", "复杂度分析"],
-    files: [],
   },
 ];
