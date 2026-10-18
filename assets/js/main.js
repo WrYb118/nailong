@@ -75,6 +75,11 @@
       .join("");
 
     // 顶部导航
+    $("#topnav").innerHTML =
+      '<a href="#work-title">作业</a>' + links.slice(0, 2).map((l) =>
+        '<a href="' + esc(l.url) + '"' + (/^https?:/.test(l.url) ? ' target="_blank" rel="noopener"' : "") + ">" + esc(l.label) + "</a>"
+      ).join("");
+  }
 
   /* ---------- 数据处理 ---------- */
 
