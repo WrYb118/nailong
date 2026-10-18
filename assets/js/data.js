@@ -114,14 +114,4 @@ const ASSIGNMENTS = [
     tags: ["动态规划", "复杂度分析"],
     files: [],
   },
-  {
-    id: "ds-hw01",
-    course: "ds",
-    title: "实验一：顺序表与链表的实现与比较",
-    date: "2026-03-18",
-    summary: "分别实现顺序表与单链表，在插入、删除、随机访问三类操作上做时间对比测试。",
-    tags: ["C++", "线性表"],
-    grade: "94",
-    files: [{ label: "实验报告", url: "files/sample-report.pdf" }],
-  },
 ];
