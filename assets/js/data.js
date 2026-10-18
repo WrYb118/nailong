@@ -58,12 +58,7 @@ const COURSES = {};
 const ASSIGNMENTS = [
   {
     id: "ds-hw03",
-    title: "实验三：二叉搜索树的插入、删除与遍历",
-    date: "2026-10-12",
-    summary: "用 C++ 实现非递归版 BST，对比递归与非递归实现在深度 10 万节点下的耗时差异。",
-    tags: ["C++", "树结构", "性能对比"],
-    grade: "96",
-    repo: "https://github.com/WrYb118/ds-lab",
-    files: [{ label: "实验报告", url: "files/sample-report.pdf" }],
+    date: "2026-10-18",
+    summary: "使用WorkBuddy制作了此网站并学习部分前端开发内容",
   },
 ];
