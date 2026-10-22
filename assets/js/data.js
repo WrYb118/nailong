@@ -70,14 +70,14 @@ const ASSIGNMENTS = [
 */
 
 const TIPS = [
-  "Tip：按 Ctrl + F5 以查看更多tips。",
-  "Tip：我是奶龙，我才是奶龙！",
-  "Tip：现在AI的发展速度令人惊叹，照这样发展下去，人类马上就要进入2027年了。",
-  "Tip：Fixations Toward the Stars",
-  "Tip：commit 只是本地存档，push 才真正把内容传到 GitHub。",
-  "Tip：按 F12 打开开发者工具，Console 里的红色报错通常就是问题所在。",
-  "Tip：10月31日前下载WorkBuddy国际版可以免费用deepseek-v4.1flash。",
-  "Tip：把浏览器窗口拖窄试试——这个站是按手机宽度适配过的。",
-  "Tip：蓝色大肥鱼报到：页面我搭的，代码我写的，锅也是我背的。（注：白饭也是他吃的）",
-  "Tip：查询好感度",
+  "按 Ctrl + F5 以查看更多tips。",
+  "我是奶龙，我才是奶龙！",
+  "现在AI的发展速度令人惊叹，照这样发展下去，人类马上就要进入2027年了。",
+  "Fixations Toward the Stars",
+  "commit 只是本地存档，push 才真正把内容传到 GitHub。",
+  "按 F12 打开开发者工具，Console 里的红色报错通常就是问题所在。",
+  "10月31日前下载WorkBuddy国际版可以免费用deepseek-v4.1flash。",
+  "把浏览器窗口拖窄试试——这个站是按手机宽度适配过的。",
+  "蓝色大肥鱼报到：页面我搭的，代码我写的，锅也是我背的。（注：白饭也是他吃的）",
+  "点击查询好感度",
 ];
