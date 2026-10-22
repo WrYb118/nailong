@@ -31,6 +31,73 @@
     </div>
   </section>
 
+  <!-- ================= 小 tips：每次刷新随机一条 =================
+       提示语内容在 assets/js/data.js 末尾的 TIPS 数组里，改那里就行。
+       样式和逻辑都写在这一块里，不用动其他文件。 -->
+  <style>
+    .tip {
+      display: none;
+      align-items: baseline;
+      gap: 12px;
+      margin: 0 0 46px;
+      padding: 13px 18px;
+      border-left: 2px solid var(--accent);
+      background: var(--accent-wash);
+      border-radius: 0 4px 4px 0;
+    }
+    .tip.is-ready {
+      display: flex;
+      animation: tipIn .38s cubic-bezier(.22, .61, .36, 1) both;
+    }
+    @keyframes tipIn {
+      from { opacity: 0; transform: translateY(4px); }
+      to { opacity: 1; transform: none; }
+    }
+    .tip__label {
+      flex: 0 0 auto;
+      font-family: var(--mono);
+      font-size: 10.5px;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--accent);
+    }
+    .tip__text {
+      margin: 0;
+      font-size: 14px;
+      line-height: 1.7;
+      color: var(--ink-soft);
+    }
+    @media (max-width: 760px) {
+      .tip { margin-bottom: 34px; padding: 11px 14px; }
+      .tip__text { font-size: 13.5px; }
+    }
+  </style>
+
+  <div class="wrap">
+    <aside class="tip" id="tip">
+      <span class="tip__label">Tips</span>
+      <p class="tip__text" id="tip-text"></p>
+    </aside>
+  </div>
+
+  <script>
+    // 等 data.js 加载完再执行，否则拿不到 TIPS
+    window.addEventListener("load", function () {
+      var box = document.getElementById("tip");
+      var text = document.getElementById("tip-text");
+      if (!box || !text || typeof TIPS === "undefined" || !TIPS.length) return;
+
+      // 记住上一条，刷新时避开它，保证每次看到的都不一样
+      var last = sessionStorage.getItem("nailong-last-tip");
+      var pool = TIPS.length > 1 ? TIPS.filter(function (t) { return t !== last; }) : TIPS;
+      var pick = pool[Math.floor(Math.random() * pool.length)];
+
+      text.textContent = pick;
+      sessionStorage.setItem("nailong-last-tip", pick);
+      box.classList.add("is-ready");
+    });
+  </script>
+
   <section class="work wrap" aria-labelledby="work-title">
     <div class="section-head">
       <h2 id="work-title">课程作业</h2>
@@ -64,4 +131,5 @@
 <script src="assets/js/data.js"></script>
 <script src="assets/js/main.js"></script>
 </body>
-</html>d
+</html>
+
