@@ -19,7 +19,7 @@ const SITE = {
   tagline: "人工智能 · 2662404046",
 
   // 自我介绍，两三句即可
-  bio: "这里记录我用 AI agent 做东西的过程：想做什么、卡在哪、最后怎么跑通。",
+  bio: "这里归档我的 AI agent 使用记录",
 
   // 自定义头像地址，留空则自动使用 GitHub 头像；再失败就显示姓名首字
   avatar: "",
@@ -64,7 +64,7 @@ const ASSIGNMENTS = [
     course: "web",
     title: "用 WorkBuddy 从零搭了这个站",
     date: "2026-10-18",
-    summary: "从零搭一个静态站，顺带学了一部分 HTML / CSS / JS，也第一次踩到部署的坑。",
+    summary: "从零搭一个静态站，学了一些 HTML / CSS / JS 的知识",
     tags: ["WorkBuddy", "HTML", "CSS"],
   },
 ];
@@ -76,14 +76,14 @@ const ASSIGNMENTS = [
 */
 
 const TIPS = [
-  "按 Ctrl + F5 可以强制刷新，绕过浏览器缓存——改了样式没生效时先试这个。",
-  "想加一条记录：往上面的 ASSIGNMENTS 里加一条，附件放进 files/ 目录。",
-  "方向标签的颜色在 COURSES 里，每个 key 对应时间线上的一个圆点颜色。",
-  "GitHub Pages 有 1–2 分钟的构建延迟，push 完别急着怀疑自己。",
+  "按 Ctrl + F5 以查看更多tips。",
+  "我是奶龙，我才是奶龙！",
+  "现在AI的发展速度令人惊叹，照这样发展下去，人类马上就要进入2027年了。",
+  "Fixations Toward the Stars",
   "commit 只是本地存档，push 才真正把内容传到 GitHub。",
   "按 F12 打开开发者工具，Console 里的红色报错通常就是问题所在。",
-  "整站配色都写在 style.css 顶部的 :root 里，改几行就能换一套风格。",
+  "10月31日前下载WorkBuddy国际版可以免费用deepseek-v4.1flash。",
   "把浏览器窗口拖窄试试——这个站是按手机宽度适配过的。",
-  "这段提示语每次刷新都会换，内容就在这个 TIPS 数组里。",
-  "写不出代码时，先用中文把要做的事写下来，再一句句翻译成函数。",
+  "蓝色大肥鱼报到：页面我搭的，代码我写的，锅也是我背的。（注：白饭也是他吃的）",
+  "点击查询好感度",
 ];
