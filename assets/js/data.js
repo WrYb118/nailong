@@ -19,7 +19,7 @@ const SITE = {
   tagline: "人工智能 · 2662404046",
 
   // 自我介绍，两三句即可
-  bio: "这里归档我的agent使用记录",
+  bio: "这里记录我用 AI agent 做东西的过程：想做什么、卡在哪、最后怎么跑通。",
 
   // 自定义头像地址，留空则自动使用 GitHub 头像；再失败就显示姓名首字
   avatar: "",
@@ -31,35 +31,41 @@ const SITE = {
   ],
 };
 
-/* ---------------- 2. 课程清单 ---------------- */
-/* key 用短英文，name 是页面上显示的名字，color 是这门课在时间线上的圆点颜色 */
+/* ---------------- 2. 方向清单 ---------------- */
+/* key 用短英文，name 是页面上显示的名字，color 是这类记录在时间线上的圆点颜色。
+   叫 course 只是历史原因，页面上统一显示为「方向」，不一定真是课程。 */
 
-const COURSES = {};
+const COURSES = {
+  web: { name: "前端实验", color: "#2C4A7C" },
+  ai: { name: "AI 工具", color: "#7A4E2D" },
+  deploy: { name: "部署运维", color: "#2F6B57" },
+};
 
-/* ---------------- 3. 作业列表 ---------------- */
+/* ---------------- 3. 记录列表 ---------------- */
 /*
-   每条作业的字段（除 id / course / title / date 外都可省略）：
+   每条记录的字段（除 id / course / title / date 外都可省略）：
 
    id       唯一标识，随意但别重复
    course   对应上面 COURSES 的 key
-   title    作业标题
+   title    这条记录的标题
    date     日期 YYYY-MM-DD，时间线按它倒序排列
-   summary  一句话说明
+   summary  一句话说明：想做什么、结果如何
    tags     标签数组
-   grade    成绩（可选，显示为角标）
+   grade    评分或自评（可选，显示为角标）
    repo     源码仓库链接（可选）
    files    附件数组，每项 { label, url }
-            url 指向 files/ 目录下的文件，例如 "files/ds-hw01.pdf"
+            url 指向 files/ 目录下的文件，例如 "files/log-002.pdf"
             url 也可以填外链，比如网盘或在线文档
-
-   注意：下面 6 条是示例数据，正式使用前删掉或替换成你自己的作业。
 */
 
 const ASSIGNMENTS = [
   {
-    id: "ds-hw03",
+    id: "log-001",
+    course: "web",
+    title: "用 WorkBuddy 从零搭了这个站",
     date: "2026-10-18",
-    summary: "使用WorkBuddy制作了此网站并学习部分前端开发内容",
+    summary: "从零搭一个静态站，顺带学了一部分 HTML / CSS / JS，也第一次踩到部署的坑。",
+    tags: ["WorkBuddy", "HTML", "CSS"],
   },
 ];
 
@@ -70,14 +76,14 @@ const ASSIGNMENTS = [
 */
 
 const TIPS = [
-  "按 Ctrl + F5 以查看更多tips。",
-  "我是奶龙，我才是奶龙！",
-  "现在AI的发展速度令人惊叹，照这样发展下去，人类马上就要进入2027年了。",
-  "Fixations Toward the Stars",
+  "按 Ctrl + F5 可以强制刷新，绕过浏览器缓存——改了样式没生效时先试这个。",
+  "想加一条记录：往上面的 ASSIGNMENTS 里加一条，附件放进 files/ 目录。",
+  "方向标签的颜色在 COURSES 里，每个 key 对应时间线上的一个圆点颜色。",
+  "GitHub Pages 有 1–2 分钟的构建延迟，push 完别急着怀疑自己。",
   "commit 只是本地存档，push 才真正把内容传到 GitHub。",
   "按 F12 打开开发者工具，Console 里的红色报错通常就是问题所在。",
-  "10月31日前下载WorkBuddy国际版可以免费用deepseek-v4.1flash。",
+  "整站配色都写在 style.css 顶部的 :root 里，改几行就能换一套风格。",
   "把浏览器窗口拖窄试试——这个站是按手机宽度适配过的。",
-  "蓝色大肥鱼报到：页面我搭的，代码我写的，锅也是我背的。（注：白饭也是他吃的）",
-  "点击查询好感度",
+  "这段提示语每次刷新都会换，内容就在这个 TIPS 数组里。",
+  "写不出代码时，先用中文把要做的事写下来，再一句句翻译成函数。",
 ];
