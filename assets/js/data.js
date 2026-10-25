@@ -62,10 +62,18 @@ const ASSIGNMENTS = [
   {
     id: "log-001",
     course: "web",
-    title: "用 WorkBuddy 从零搭了这个站",
+    title: "用 WorkBuddy 从零搭了这个网站",
     date: "2026-10-18",
-    summary: "从零搭一个静态站，学了一些 HTML / CSS / JS 的知识",
+    summary: "学了一些 HTML / CSS / JS 的知识",
     tags: ["WorkBuddy", "HTML", "CSS"],
+  },
+   {
+    id: "log-002",
+    course: "",
+    title: "测试WorkBuddy剪视频能力",
+    date: "2026-10-25",
+    summary: "视频地址：https://www.bilibili.com/video/BV1f5HV6dECB/",
+    tags: ["WorkBuddy"],
   },
 ];
 
@@ -86,4 +94,5 @@ const TIPS = [
   "把浏览器窗口拖窄试试——这个站是按手机宽度适配过的。",
   "蓝色大肥鱼报到：页面我搭的，代码我写的，锅也是我背的。（注：白饭也是他吃的）",
   "点击查询好感度",
+  "大狗为什么会叫？奶龙为什么会笑？牛是怎么来的？"
 ];
