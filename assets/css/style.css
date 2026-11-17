@@ -171,7 +171,8 @@ img { display: block; max-width: 100%; }
 
 .hero__bio {
   margin: 18px 0 0;
-  max-width: 60ch;
+  /* 中文一行大约 40 字最舒服；用 em 而不是 ch，ch 是按英文字符宽度算的 */
+  max-width: 40em;
   font-size: 16px;
   line-height: 1.78;
   color: var(--ink-soft);

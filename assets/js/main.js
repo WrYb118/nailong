@@ -36,7 +36,7 @@
   /* ---------- 顶部：头像 / 姓名 / 简介 / 链接 ---------- */
 
   function renderHeader() {
-    document.title = SITE.name + " · 课程作业";
+    document.title = SITE.name + " · 实验记录";
     $("#brand-name").textContent = SITE.name;
     $("#hero-name").textContent = SITE.name;
     $("#tagline").textContent = SITE.tagline || "";
@@ -76,7 +76,9 @@
 
     // 顶部导航
     $("#topnav").innerHTML =
-      '<a href="#work-title">作业</a>' + links.slice(0, 2).map((l) =>
+      '<a href="#work-title">记录</a>' +
+      '<a href="mlp.html">MLP 实验台</a>' +
+      links.slice(0, 2).map((l) =>
         '<a href="' + esc(l.url) + '"' + (/^https?:/.test(l.url) ? ' target="_blank" rel="noopener"' : "") + ">" + esc(l.label) + "</a>"
       ).join("");
   }
@@ -128,10 +130,13 @@
   function cardHTML(a) {
     const actions = [];
     a.files.forEach((f, i) => {
-      const external = /^https?:/.test(f.url || "");
+      // 外链新开标签；指向文件的加 download；站内页面（如 mlp.html）直接跳转，不能加 download
+      const url = f.url || "";
+      const external = /^https?:/.test(url);
+      const isFile = /\.(pdf|zip|docx?|xlsx?|pptx?|md|txt|csv|png|jpe?g)$/i.test(url);
+      const attrs = external ? ' target="_blank" rel="noopener"' : (isFile ? " download" : "");
       actions.push(
-        '<a class="btn' + (i === 0 ? " btn--solid" : "") + '" href="' + esc(f.url) + '"' +
-        (external ? ' target="_blank" rel="noopener"' : ' download') + ">" +
+        '<a class="btn' + (i === 0 ? " btn--solid" : "") + '" href="' + esc(url) + '"' + attrs + ">" +
         fileIcon + esc(f.label || "附件") + "</a>"
       );
     });
@@ -186,8 +191,8 @@
     const courseCount = usedCourses.length;
     $("#count").textContent =
       list.length === total
-        ? "共 " + total + " 份 · " + courseCount + " 门课程"
-        : "筛选出 " + list.length + " / " + total + " 份";
+        ? "共 " + total + " 条 · " + courseCount + " 个方向"
+        : "筛选出 " + list.length + " / " + total + " 条";
 
     // 页脚
     $("#footer-note").textContent = "© " + new Date().getFullYear() + " " + SITE.name;
